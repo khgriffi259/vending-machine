@@ -8,7 +8,7 @@ const Buttons = ({items, purchaseItemSuccess, insufficientFunds, outOfStock, sho
     const attemptPurchase = (item_id, item_price, money_received, item_quantity) => {
         if (item_quantity <= 0) {
             return outOfStock(null,()=>setTimeout(()=>resetError(),2000));
-        }else if (money_received <= item_price) {
+        }else if (money_received < item_price) {
             return insufficientFunds(item_id, ()=>setTimeout(()=>resetError(),2000));
         } else {
             return purchaseItemSuccess(item_id, () => depositMoney(item_price));

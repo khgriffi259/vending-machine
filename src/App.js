@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-6">
